@@ -48,6 +48,31 @@
 
 /datum/species/alternian/proc/set_sign(mob/living/carbon/human/H, sign)
 	H:dna:species:sign = sign
+	switch(sign)
+		if("Arga"||"Arcer"||"Argo")
+			H.name += " Rust"
+		if("Taura"||"Taurittanius"||"Taurga")
+			H.name += " Bronze"
+		if("Gemnius"||"Gemsci"||"Gemza")
+			H.name += " Gold"
+		if("Canrus"||"Cansci"||"Canrist")
+			H.name += " Lime"
+		if("Lesces"||"Leiborn"||"Lerius")
+			H.name += " Olive"
+		if("Virrus"||"Virnius"||"Virpia")
+			H.name += " Jade"
+		if("Libun"||"Ligo"||"Limino")
+			H.name += " Teal"
+		if("Scorittarius"||"Scorun"||"Scorza")
+			H.name += " Cerulean"
+		if("Sagio"||"Sagimino"||"Sagicen")
+			H.name += " Indigo"
+		if("Capriza"||"Capries"||"Capriborn")
+			H.name += " Purple"
+		if("Aquapio"||"Aquaries"||"Aquapia")
+			H.name += " Violet"
+		if("Pirius"||"Pittarius"||"Picen")
+			H.name += " Fuchsia"
 
 /datum/species/alternian/proc/select_sign(mob/living/carbon/human/H)
 	if(isalternian(H))
