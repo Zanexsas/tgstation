@@ -52,9 +52,10 @@
 		for(var/_sign in (GLOB.allSigns - GLOB.usedSigns))
 			possibleSigns += _sign
 		if(possibleSigns)
-			H.dna?.species?.sign? = pick(possibleSigns)
-			H << "\blue Your sign is [H.dna?.species?.sign?]!"
+			var picked = pick(possibleSigns)
+			H.dna?.species?.sign = picked
+			H << "\blue Your sign is [H.dna?.species?.sign]!"
 		else
-			H.dna?.species?.sign? = "Mutant"
+			H.dna?.species?.sign = "Mutant"
 	else
 		return FALSE
