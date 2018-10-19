@@ -46,16 +46,20 @@
 /datum/species/alternian/qualifies_for_rank(rank, list/features)
 	return TRUE
 
+/datum/species/alternian/proc/set_sign(mob/living/carbon/human/H, sign)
+	H:dna:species:sign = sign
+
 /datum/species/alternian/proc/select_sign(mob/living/carbon/human/H)
 	if(isalternian(H))
 		var/list/possibleSigns
 		for(var/_sign in (GLOB.allSigns - GLOB.usedSigns))
 			possibleSigns += _sign
 		if(possibleSigns)
-			var picked = pick(possibleSigns)
-			H.dna?.species?.sign = picked
-			H << "\blue Your sign is [H.dna?.species?.sign]!"
+			var/picked = pick(possibleSigns)
+			GLOB.usedSigns += picked
+			set_sign(H, picked)
+			H << "\blue Your sign is [picked]!"
 		else
-			H.dna?.species?.sign = "Mutant"
+			return FALSE
 	else
 		return FALSE

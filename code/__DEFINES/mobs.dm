@@ -173,6 +173,10 @@
 #define SLIME_FRIENDSHIP_STAY				3 //Min friendship to order it to stay
 #define SLIME_FRIENDSHIP_ATTACK				8 //Min friendship to order it to attack
 
+//Alternians
+
+#define MUTANT "Mutant"
+
 //Sentience types, to prevent things like sentience potions from giving bosses sentience
 #define SENTIENCE_ORGANIC 1
 #define SENTIENCE_ARTIFICIAL 2
