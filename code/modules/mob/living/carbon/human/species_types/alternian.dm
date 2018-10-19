@@ -24,12 +24,13 @@
 
 /datum/species/alternian/New()
 	.=..()
-	post_update(mob/living/carbon/human/H)
+	var/mob/living/carbon/human/H = src
+	post_update(H)
 
 /datum/species/alternian/post_update(mob/living/carbon/human/H)
 	.=..()
-	if(H.stat != DEAD)
-		H.select_sign(H)
+	if(isalternian(H))
+		H.dna?.species?.select_sign(H)
 
 /datum/species/alternian/on_species_gain(mob/living/carbon/C)
 	. = ..()
@@ -46,11 +47,14 @@
 	return TRUE
 
 /datum/species/alternian/proc/select_sign(mob/living/carbon/human/H)
-	var/list/possibleSigns
-	for(var/_sign in (GLOB.allSigns - GLOB.usedSigns))
-		possibleSigns += _sign
-	if(possibleSigns && O.client)
-		H.sign = pick(possibleSigns)
-		H << "\blue Your sign is [H.sign]!"
+	if(isalternian(H))
+		var/list/possibleSigns
+		for(var/_sign in (GLOB.allSigns - GLOB.usedSigns))
+			possibleSigns += _sign
+		if(possibleSigns)
+			H.dna?.species?.sign? = pick(possibleSigns)
+			H << "\blue Your sign is [H.dna?.species?.sign?]!"
+		else
+			H.dna?.species?.sign? = "Mutant"
 	else
-		H.sign = "Mutant"
+		return FALSE
