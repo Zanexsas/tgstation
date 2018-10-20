@@ -1521,9 +1521,19 @@
 ******ALTERNIANS******
 *********************/
 /datum/sprite_accessory/alternian_horns
-	icon = 'icons/mob/alternian_horns.dmi'
+	icon = 'alternian_horns_big.dmi'
+
 	color_src = null
 
+
+//smallos
 /datum/sprite_accessory/alternian_horns/simple
 	name = "Simple"
+	icon = 'alternian_horns.dmi'
 	icon_state = "simple"
+
+
+//biggos
+/datum/sprite_accessory/alternian_horns/supreme_fuschia
+	name = "Supreme Fuschia"
+	icon_state = "supreme_fuschia"
