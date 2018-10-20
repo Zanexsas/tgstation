@@ -50,29 +50,64 @@
 	H:dna:species:sign = sign
 	switch(sign)
 		if("Arga"||"Arcer"||"Argo")
-			H.name += " Rust"
+			H.name = H.name = H.name += " Rust"
+			H.real_name += " Rust"
+			H.replace_identification_name(H.name,(H.name = H.name += " Rust"))
+
 		if("Taura"||"Taurittanius"||"Taurga")
-			H.name += " Bronze"
+			H.name = H.name = H.name += " Bronze"
+			H.real_name += " Bronze"
+			H.replace_identification_name(H.name,(H.name = H.name += " Bronze"))
+
 		if("Gemnius"||"Gemsci"||"Gemza")
-			H.name += " Gold"
+			H.name = H.name += " Gold"
+			H.real_name += " Gold"
+			H.replace_identification_name(H.name,(H.name = H.name += " Gold"))
+
 		if("Canrus"||"Cansci"||"Canrist")
-			H.name += " Lime"
+			H.name = H.name += " Lime"
+			H.real_name += " Lime"
+			H.replace_identification_name(H.name,(H.name = H.name += " Lime"))
+
 		if("Lesces"||"Leiborn"||"Lerius")
-			H.name += " Olive"
+			H.name = H.name += " Olive"
+			H.real_name += " Olive"
+			H.replace_identification_name(H.name,(H.name = H.name += " Olive"))
+
 		if("Virrus"||"Virnius"||"Virpia")
-			H.name += " Jade"
+			H.name = H.name += " Jade"
+			H.real_name += " Jade"
+			H.replace_identification_name(H.name,(H.name = H.name += " Jade"))
+
 		if("Libun"||"Ligo"||"Limino")
-			H.name += " Teal"
+			H.name = H.name += " Teal"
+			H.real_name += " Teal"
+			H.replace_identification_name(H.name,(H.name = H.name += " Teal"))
+
 		if("Scorittarius"||"Scorun"||"Scorza")
-			H.name += " Cerulean"
+			H.name = H.name += " Cerulean"
+			H.real_name += " Cerulean"
+			H.replace_identification_name(H.name,(H.name = H.name += " Cerulean"))
+
 		if("Sagio"||"Sagimino"||"Sagicen")
-			H.name += " Indigo"
+			H.name = H.name += " Indigo"
+			H.real_name += " Indigo"
+			H.replace_identification_name(H.name,(H.name = H.name += " Indigo"))
+
 		if("Capriza"||"Capries"||"Capriborn")
-			H.name += " Purple"
+			H.name = H.name += " Purple"
+			H.real_name += " Purple"
+			H.replace_identification_name(H.name,(H.name = H.name += " Purple"))
+
 		if("Aquapio"||"Aquaries"||"Aquapia")
-			H.name += " Violet"
+			H.name = H.name += " Violet"
+			H.real_name += " Violet"
+			H.replace_identification_name(H.name,(H.name = H.name += " Violet"))
+
 		if("Pirius"||"Pittarius"||"Picen")
-			H.name += " Fuchsia"
+			H.name = H.name += " Fuchsia"
+			H.real_name += " Fuchsia"
+			H.replace_identification_name(H.name,(H.name = H.name += " Fuchsia"))
 
 /datum/species/alternian/proc/select_sign(mob/living/carbon/human/H)
 	if(isalternian(H))
