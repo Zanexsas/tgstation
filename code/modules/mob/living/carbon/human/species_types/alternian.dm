@@ -48,16 +48,20 @@
 
 /datum/species/alternian/proc/set_sign(mob/living/carbon/human/H, sign)
 	H:dna:species:sign = sign
+	var/enum = pick(1,2,3)
 	switch(sign)
 		if("Arga"||"Arcer"||"Argo")
 			H.name = H.name = H.name += " Rust"
 			H.real_name += " Rust"
 			H.replace_identification_name(H.name,(H.name = H.name += " Rust"))
+			H.dna.features["alternian_horns"] = "[(H.client && H.client.prefs && LAZYLEN(H.client.prefs.features) && H.client.prefs.features["alternian_horns"]) ? H.client.prefs.features["alternian_horns"] : "rust_horns[enum > 1 ? enum : 2]"]"
 
 		if("Taura"||"Taurittanius"||"Taurga")
 			H.name = H.name = H.name += " Bronze"
 			H.real_name += " Bronze"
 			H.replace_identification_name(H.name,(H.name = H.name += " Bronze"))
+			H.dna.features["alternian_horns"] = "[(H.client && H.client.prefs && LAZYLEN(H.client.prefs.features) && H.client.prefs.features["alternian_horns"]) ? H.client.prefs.features["alternian_horns"] : "bronze_horns[enum]"]"
+
 
 		if("Gemnius"||"Gemsci"||"Gemza")
 			H.name = H.name += " Gold"

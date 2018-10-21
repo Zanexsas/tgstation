@@ -1521,19 +1521,37 @@
 ******ALTERNIANS******
 *********************/
 /datum/sprite_accessory/alternian_horns
-	icon = 'alternian_horns_big.dmi'
-
+	icon = 'alternian_horns.dmi'
 	color_src = null
 
 
 //smallos
 /datum/sprite_accessory/alternian_horns/simple
 	name = "Simple"
-	icon = 'alternian_horns.dmi'
 	icon_state = "simple"
 
+/datum/sprite_accessory/alternian_horns/rust_one
+	name = "Rust 1"
+	icon_state = "rust_horns2"
+
+/datum/sprite_accessory/alternian_horns/rust_two
+	name = "Rust 2"
+	icon_state = "rust_horns3"
+
+/datum/sprite_accessory/alternian_horns/bronze_one
+	name = "Bronze 1"
+	icon_state = "bronze_horns1"
+
+/datum/sprite_accessory/alternian_horns/bronze_two
+	name = "Bronze 2"
+	icon_state = "bronze_horns2"
+
+/datum/sprite_accessory/alternian_horns/bronze_three
+	name = "Bronze 3"
+	icon_state = "bronze_horns3"
 
 //biggos
 /datum/sprite_accessory/alternian_horns/supreme_fuschia
 	name = "Supreme Fuschia"
+	icon = 'alternian_horns_big.dmi'
 	icon_state = "supreme_fuschia"
