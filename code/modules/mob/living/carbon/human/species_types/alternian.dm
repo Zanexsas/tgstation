@@ -129,6 +129,7 @@
 			var/picked = pick(possibleSigns)
 			GLOB.usedSigns += picked
 			E.sign = picked
+			update_sign(H)
 		else
 			goto picking
 	else
