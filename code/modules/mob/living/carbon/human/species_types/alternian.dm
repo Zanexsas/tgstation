@@ -118,7 +118,7 @@
 				H.replace_identification_name(H.name,(H.name = H.name += " Fuchsia"))
 
 /datum/species/alternian/proc/select_sign(mob/living/carbon/human/H)
-	var/datum/species/ethereal/E = H.dna?.species
+	var/datum/species/alternian/E = H.dna?.species
 	if(isalternian(H) && !E.sign)
 		var/list/possibleSigns
 		picking:
