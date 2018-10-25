@@ -28,7 +28,6 @@
 
 
 	. = ..()
-	dna?.species?.post_update(src)
 	AddComponent(/datum/component/redirect, list(COMSIG_COMPONENT_CLEAN_ACT = CALLBACK(src, .proc/clean_blood)))
 
 
